@@ -1,6 +1,6 @@
 {
 	"name": "svelte-dark-theme",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Dark theme store for Svelte.",
 	"type": "module",
 	"license": "MIT",

@@ -82,5 +82,5 @@ if (browser) {
 
 export const theme = {
 	subscribe,
-	change: (setting: Setting) => (isSetting(setting) ? setTheme(setting) : null)
+	change: (setting: Setting) => setTheme(setting)
 }

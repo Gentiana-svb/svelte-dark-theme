@@ -15,7 +15,7 @@ npm i -D svelte-dark-theme
 ## Usage
 
 ```svelte
-<script lang="ts">
+<script>
 	import { theme } from 'svelte-dark-theme'
 </script>
 

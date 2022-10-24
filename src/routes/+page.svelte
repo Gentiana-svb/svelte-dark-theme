@@ -2,12 +2,19 @@
 	import { theme } from '$lib'
 </script>
 
+<!-- 'dark' | 'light' -->
 <div>current: {$theme.current}</div>
+
+<!-- 'dark' | 'light' | 'sync' -->
 <div>setting: {$theme.setting}</div>
 
-<button on:click={() => theme.change('dark')}>set dark</button>
-<button on:click={() => theme.change('light')}>set light</button>
-<button on:click={() => theme.change('sync')}>set sync</button>
+<!-- true | false -->
+<div>now dark mode: {$theme.isDark}</div>
+<div>now light mode: {$theme.isLight}</div>
+
+<button on:click={() => theme.change('dark')}>set dark theme</button>
+<button on:click={() => theme.change('light')}>set light theme</button>
+<button on:click={() => theme.change('sync')}>set system default</button>
 
 <style>
 	:global(body) {

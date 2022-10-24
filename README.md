@@ -7,6 +7,8 @@ Dark theme store for Svelte.
 - Class binding to document.body
 - Sync settings between multiple tabs
 
+[Demo](https://gentiana-svb.github.io/svelte-dark-theme/)
+
 ## Installation
 
 ```bash

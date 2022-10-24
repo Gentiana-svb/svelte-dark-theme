@@ -1,38 +1,44 @@
-# create-svelte
+# svelte-dark-teme
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Dark theme store for Svelte.
 
-## Creating a project
+- Persistence using localStorage
+- System theme detection using matchMedia
+- Class binding to document.body
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Installation
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm i -D svelte-dark-theme
 ```
 
-## Building
+## Usage
 
-To create a production version of your app:
+```svelte
+<script lang="ts">
+	import { theme } from 'svelte-dark-theme'
+</script>
 
-```bash
-npm run build
+<div>current: {$theme.current}</div>
+<div>setting: {$theme.setting}</div>
+
+<button on:click={() => theme.change('dark')}>set dark</button>
+<button on:click={() => theme.change('light')}>set light</button>
+<button on:click={() => theme.change('sync')}>set sync</button>
+
+<style>
+	:global(body) {
+		/* Fallback while JS disable */
+		background: rgb(51, 87, 54);
+		color: rgb(132, 106, 69);
+	}
+	:global(body.light) {
+		background: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+	}
+	:global(body.dark) {
+		background: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+	}
+</style>
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

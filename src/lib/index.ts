@@ -1,6 +1,7 @@
 import { writable } from 'svelte-local-storage-store'
-import { browser } from '$app/environment'
 import { get } from 'svelte/store'
+
+const browser = typeof window !== 'undefined'
 
 type Theme = 'light' | 'dark'
 

@@ -5,6 +5,7 @@ Dark theme store for Svelte.
 - Persistence using localStorage
 - System theme detection using matchMedia
 - Class binding to document.body
+- Sync settings between multiple tabs
 
 ## Installation
 

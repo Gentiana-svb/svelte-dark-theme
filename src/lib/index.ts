@@ -3,11 +3,11 @@ import { get } from 'svelte/store'
 
 const browser = typeof window !== 'undefined'
 
-type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark'
 
-type Setting = Theme | 'sync'
+export type Setting = Theme | 'sync'
 
-type Store = {
+export type Store = {
 	current: Theme
 	setting: Setting
 	isDark: boolean
@@ -21,10 +21,10 @@ const initial: Store = {
 	isLight: true
 }
 
-const isTheme = (x: string | undefined): x is Theme =>
+export const isTheme = (x: string | undefined): x is Theme =>
 	x === 'light' || x === 'dark'
 
-const isSetting = (x: string): x is Setting => isTheme(x) || x === 'sync'
+export const isSetting = (x: string): x is Setting => isTheme(x) || x === 'sync'
 
 const bindClass = (tag: string, term: () => unknown) =>
 	term()

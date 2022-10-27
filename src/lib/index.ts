@@ -64,7 +64,7 @@ const internalStore = writable<Store>(
 
 const { subscribe, set } = internalStore
 
-internalStore.subscribe(x => {
+subscribe(x => {
 	if (browser) {
 		bindClass('dark', () => x.current === 'dark')
 		bindClass('light', () => x.current === 'light')

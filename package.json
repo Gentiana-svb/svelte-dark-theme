@@ -2,6 +2,11 @@
 	"name": "svelte-dark-theme",
 	"version": "0.0.5",
 	"description": "Dark theme store for Svelte.",
+	"keywords": [
+		"svelte",
+		"dark",
+		"theme"
+	],
 	"type": "module",
 	"license": "MIT",
 	"repository": {
